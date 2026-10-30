@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book an appointment in a few simple steps." />
+  <title>Slotly — Appointment Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">S</span> slotly</a>
+    <span class="top-note"><span class="live-dot"></span> Simple online booking</span>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">YOUR TIME MATTERS</p>
+      <h1>Make time for<br><span>what matters.</span></h1>
+      <p class="intro-copy">Choose a service, find a time that works, and book your appointment in just a few clicks.</p>
+      <div class="trust-row">
+        <span>✓ Easy booking</span>
+        <span>✓ Instant confirmation</span>
+        <span>✓ No phone calls</span>
+      </div>
+    </section>
+
+    <section class="booking-card">
+      <div class="card-heading">
+        <div>
+          <p class="eyebrow">BOOK ONLINE</p>
+          <h2>Schedule an appointment</h2>
+        </div>
+        <div class="step-pill">01 — 03</div>
+      </div>
+
+      <form id="booking-form">
+        <div class="form-grid">
+          <label class="field full">
+            <span>What do you need?</span>
+            <select id="service" required>
+              <option value="">Select a service</option>
+              <option>Consultation</option>
+              <option>Project Discussion</option>
+              <option>Career Guidance</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Your name</span>
+            <input id="name" type="text" placeholder="e.g. Alex Johnson" maxlength="100" required />
+          </label>
+          <label class="field">
+            <span>Email address</span>
+            <input id="email" type="email" placeholder="alex@example.com" required />
+          </label>
+
+          <label class="field full">
+            <span>Choose a date</span>
+            <input id="date" type="date" required />
+          </label>
+        </div>
+
+        <div class="slot-section">
+          <div class="slot-heading">
+            <span class="field-title">Available time slots</span>
+            <span class="slot-hint">Your local time</span>
+          </div>
+          <div id="slots" class="slots">
+            <p class="empty-state">Choose a date to see available times.</p>
+          </div>
+        </div>
+
+        <label class="field full notes-field">
+          <span>Anything we should know? <small>(optional)</small></span>
+          <textarea id="notes" rows="3" placeholder="Add a short note..."></textarea>
+        </label>
+
+        <input type="hidden" id="selected-time" />
+        <button class="submit-btn" type="submit" id="submit-btn">
+          Confirm appointment <span>→</span>
+        </button>
+        <p class="form-footnote">By booking, you agree to be contacted about this appointment.</p>
+      </form>
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Slotly</span>
+    <span>Built for a simpler schedule.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
