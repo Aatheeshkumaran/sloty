@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Appointment Booking System
 
 A small full-stack appointment booking app built with **HTML, CSS, JavaScript and Django**.
@@ -127,3 +128,6 @@ Example POST JSON:
 - The app uses SQLite for local development and PostgreSQL when `DATABASE_URL` is configured.
 - Appointment times are demo slots and can be edited in `backend/bookings/views.py`.
 - This is a teaching/demo project. For a public production system, add email verification, rate limiting, stronger admin access controls, and privacy/retention policies.
+=======
+# sloty
+>>>>>>> a5ee8f872e5c9e998a5e3151fba0bc3241844b94
